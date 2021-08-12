@@ -24,3 +24,25 @@ Space Complexity in JS
 
 Logs - inverse of an exponent
     log₂(4) = 3 means 2² = 4
+
+Big O of objects
+    - Unordered key value pairs data structures
+When to use objects
+    A. When you don't need order
+    B. When you need fast acess and insertion/removal
+        - Insertion = O(1)
+        - Removal = O(1)
+        - Searching = O(N)
+        - Access = O(1)
+
+Big O of Arrays
+    - Ordered lists
+When to use Arrays
+    A. When you need order
+    B. When you need fast acess and insertion/removal
+        - Insertion = depends..
+            inserting at the end is O(1) but inserting at the beginning is O(n)
+        - Removal = depends..
+            removing at the end is O(1) but inserting at the beginning is O(n)
+        - Searching = O(N)
+        - Access = O(1)
