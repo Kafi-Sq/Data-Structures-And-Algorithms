@@ -1,5 +1,6 @@
 // Examples of adding to Big O Notation
 
+// Time Complexity - analyzing the runtime of an algorithm as the size increases
 // Both functions take an input (n) and add up all the 
     // numbers in between 0 and n but the second function is
     // significantlly faster because the number of opertaions 
@@ -62,6 +63,30 @@ function logAtMost5(n) {
         console.log(i)
     }
 }
+
+// Space Complexity - analyzing the space or memory we need to allocate
+    // in order to run the code
+
+function sum(arr) {
+    let total = 0; // one number assignment
+    for (let i = 0; i < arr.length; i++){
+// another one ↑
+        total += arr[i]
+    }
+    return total
+    // O(1) space
+}
+
+function double(arr) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++){
+        newArr.push(2 * arr[i])
+        // array gets larger as n gets bigger
+    }
+    return newArr
+    // O(n) space
+}
+
 
 
 

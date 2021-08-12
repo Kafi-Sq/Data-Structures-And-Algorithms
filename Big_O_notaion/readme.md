@@ -16,3 +16,11 @@ Simplyfying Big O Expressions
         B. Variable assignment is constant
         C. Accessing elements in an array (by index) or object (by key) is constant
         D. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside the loop
+
+Space Complexity in JS
+    1. Most primatives (booleans, numbers, undefined, null) are constant in space
+    2. Strings require O(n) space (where n is the length of the string)
+    2. Refrence types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
+Logs - inverse of an exponent
+    log₂(4) = 3 means 2² = 4
