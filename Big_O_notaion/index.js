@@ -87,6 +87,31 @@ function double(arr) {
     // O(n) space
 }
 
+// Valid Anagram
+function validAnagram(str1, str2){
+    if (str1.length !== str2.length){
+      return false
+    }
+  
+    const lookup = {}
+  
+    for (let val of str1){
+      let letter = val
+      lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1
+    }
+  
+    for (let val of str2){
+      let letter = val
+      if (!lookup[letter]){
+        return false
+      }else {
+        lookup[letter] -= 1
+      }
+    }
+    return true
+    
+  }
+
 
 
 
