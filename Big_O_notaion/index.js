@@ -87,7 +87,10 @@ function double(arr) {
     // O(n) space
 }
 
-// Valid Anagram
+
+// Problem solving patterns
+
+// Frequency counter instead of a nested loop
 function validAnagram(str1, str2){
     if (str1.length !== str2.length){
       return false
@@ -111,6 +114,8 @@ function validAnagram(str1, str2){
     return true
     
   }
+
+  // multiple pointer
 
 
 
