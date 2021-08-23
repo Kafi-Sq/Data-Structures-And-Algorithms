@@ -39,5 +39,24 @@ function countDown(num) {
     num--
     countDown(num)
 }
-
 countDown(5)
+
+function sumRange(num) {
+    if (num === 1) return 1
+    return num + sumRange(num - 1)
+}
+sumRange(4)
+
+// Non recursive way
+function factorial(num){
+    let total = 1
+    for (let i = num; i > 0; i--){
+        total *= 1
+    }
+    return total
+}
+// Recursive way
+function factorial(num){
+    if (num === 1) return 1
+    return num * factorial(num -1)
+}
