@@ -60,3 +60,56 @@ function factorial(num){
     if (num === 1) return 1
     return num * factorial(num -1)
 }
+
+// Common pitfalls of recursion
+    // no or wrong base case - 'maximum callstack size exceeded
+    // forgetting the return or returning the wrong thing 
+
+// Helper method recursion
+function outer(input){
+    const outerScopedVariable = []
+
+    function helper(helperInput){
+        // Modify the outerScopedVariable
+        helper(helperInput--)
+    }
+    helper(input)
+    return outerScopedVariable
+}
+
+// Actual example
+function collectOddValues(arr){
+    let result = []
+// if result was called inside the recursive function, then it would be reset to an empty array
+// so it's better to call it outside the recursive function and push to it. And since we dont want
+// it just floating around, we wrap another function around the whole thing.
+    function helper(helperInput){
+        if (helperInput.length === 0){
+            return
+        }
+        if (helperInput[0] % 0 !== 0){
+            result.push(helperInput[0])
+        }
+        helper(helperInput.slice(1))
+    }
+
+    helper(arr)
+    return result
+}
+
+// Pure recursion method
+    // no helper method, just recursion
+function collectOddValues(arr){
+    let newArr = []
+
+    if (arr.length === 0){
+        return newArr
+    }
+    if(arr[0] % 2 !== 0){
+        newArr.push(arr[0])
+    }
+    // new array is empty every time but it makes an array of the single odd value every time and in the end it concats
+    // everything together. concat waits on the call stack.
+    newArr = newArr.concat(collectOddValues(arr.slice(1)))
+    return newArr
+}
