@@ -99,6 +99,10 @@ function collectOddValues(arr){
 
 // Pure recursion method
     // no helper method, just recursion
+    // For arrays, use methods like slice, spread operator, and concat to make copies of the array so it
+    // doesn't get mutated.
+    // Strings are immutable, so use methods like slice, substr, or substring to make copies
+    // Use Object.assign, or the spread operator for objects
 function collectOddValues(arr){
     let newArr = []
 
